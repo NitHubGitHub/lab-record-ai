@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+generated/
+.DS_Store
+test_gemini.py

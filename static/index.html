@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Record AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+
+            <div class="logo-area">
+                <h1>LAB RECORD AI</h1>
+                <p>Engineering Lab Content Generator</p>
+            </div>
+
+            <div class="form-section">
+
+                <label>Course Name</label>
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Example: Programming in C"
+                >
+
+                <label>Experiment Name</label>
+                <input
+                    type="text"
+                    id="experiment"
+                    placeholder="Matrix Addition Using Functions"
+                >
+
+                <button id="validateBtn">
+                    Validate Experiment
+                </button>
+
+            </div>
+
+            <div id="validationResult"></div>
+            
+            <div id="sectionsPanel" class="hidden">
+                 <h3>Choose Sections</h3>
+
+            <div class="section-grid"> 
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Aim">
+                    Aim
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Requirements">
+                    Requirements
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Materials Required">
+                    Materials Required
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Apparatus Required">
+                    Apparatus Required
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Theory">
+                    Theory
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Formula">
+                    Formula
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Algorithm">
+                    Algorithm
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Flowchart">
+                    Flowchart
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Procedure">
+                    Procedure
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Program">
+                    Program
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Source Code">
+                    Source Code
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Observation">
+                    Observation
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Observation Table">
+                    Observation Table
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Calculation">
+                    Calculation
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Output">
+                    Output
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Result">
+                    Result
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Conclusion">
+                    Conclusion
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Applications">
+                    Applications
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Precautions">
+                    Precautions
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Viva Questions">
+                    Viva Questions
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="Learning Outcomes">
+                    Learning Outcomes
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" value="References">
+                    References
+                </label>
+
+            </div>
+
+                <button id="generateBtn">
+                    Generate Content
+                </button>
+
+            </div>
+
+        </aside>
+
+        <main class="workspace">
+
+            <div class="workspace-header">
+
+                <span>OUTPUT</span>
+
+                <button
+                    id="viewDocBtn"
+                    class="hidden"
+                >
+                    View as Document
+                </button>
+
+            </div>
+
+            <div class="output-panel" id="outputPanel">
+
+                <div class="placeholder">
+
+                    Generated content will appear here.
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+<div id="documentModal" class="hidden">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Laboratory Record</h2>
+
+            <div class="doc-actions">
+
+                <button id="editDocBtn">
+                    Edit Document
+                </button>
+
+                <button id="downloadDocBtn">
+                    Download DOCX
+                </button>
+
+                <button id="closeModalBtn">
+                    ✕
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="documentPreview">
+
+        </div>
+
+    </div>
+
+</div>
+<script src="/static/script.js"></script>
+
+</body>
+</html>
