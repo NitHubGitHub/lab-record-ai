@@ -426,3 +426,39 @@ button:hover{
 .sidebar::-webkit-scrollbar-thumb:hover {
     background: #4b5b75;
 }
+
+
+@media (max-width: 768px) {
+
+    .app-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #2c3444;
+    }
+
+    .workspace {
+        width: 100%;
+    }
+
+    .output-panel {
+        padding: 20px;
+    }
+
+    .output-panel pre {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        white-space: pre-wrap;
+
+        word-break: break-word;
+    }
+
+}

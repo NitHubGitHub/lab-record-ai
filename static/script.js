@@ -296,6 +296,16 @@ async function generateContent() {
 
         viewDocBtn.classList.remove("hidden");
 
+        /* Mobile: jump to output after generation */
+        if (window.innerWidth <= 768) {
+
+            document.getElementById("outputPanel")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
     }
 
     catch(error) {
