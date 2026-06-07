@@ -430,35 +430,61 @@ button:hover{
 
 @media (max-width: 768px) {
 
+    body {
+        overflow:auto;
+        height:auto;
+    }
+
     .app-container {
-        flex-direction: column;
-        height: auto;
+        flex-direction:column;
+        height:auto;
     }
 
     .sidebar {
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #2c3444;
+        width:100%;
+        height:auto;
+
+        border-right:none;
+        border-bottom:1px solid #2c3444;
+
+        overflow:visible;
     }
 
     .workspace {
-        width: 100%;
+        width:100%;
+        min-height:auto;
     }
 
     .output-panel {
-        padding: 20px;
+        padding:20px;
     }
 
     .output-panel pre {
 
-        font-size: 15px;
+        font-size:15px;
 
-        line-height: 1.7;
+        line-height:1.7;
 
-        white-space: pre-wrap;
+        white-space:pre-wrap;
 
-        word-break: break-word;
+        word-break:break-word;
+    }
+
+    .doc-container {
+
+        padding:20px;
+    }
+
+    .doc-container p {
+
+        font-size:18px;
+
+        line-height:1.8;
+    }
+
+    .doc-heading {
+
+        font-size:24px;
     }
 
 }

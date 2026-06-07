@@ -184,6 +184,15 @@ async function validateExperiment() {
 
             sectionsPanel.classList.remove("hidden");
 
+            setTimeout(() => {
+
+                sectionsPanel.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }, 200);
+
         }
 
         else if (data.domain === "System") {
