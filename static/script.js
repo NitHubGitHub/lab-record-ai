@@ -308,9 +308,10 @@ async function generateContent() {
         /* Mobile: jump to output after generation */
         if (window.innerWidth <= 768) {
 
-            document.getElementById("outputPanel")
+            document.querySelector(".workspace")
                 .scrollIntoView({
-                    behavior: "smooth"
+                    behavior: "smooth",
+                    block: "start"
                 });
 
         }
