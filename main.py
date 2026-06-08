@@ -50,6 +50,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def home():
     return FileResponse("static/index.html")
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 
 @app.post("/validate")
 def validate(data: ValidationRequest):
